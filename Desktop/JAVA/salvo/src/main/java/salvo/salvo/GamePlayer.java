@@ -30,8 +30,8 @@ public class GamePlayer {
     private Game game;
 
     public GamePlayer(Player p1, Game g1) {
-        this.player = player;
-        this.game = game;
+        this.player = p1;
+        this.game = g1;
         this.joinDate = new Date();
     }
 
@@ -55,5 +55,10 @@ public class GamePlayer {
     public void setGame(Game game) {
         this.game = game;
     }
+
+    public Long getId() {
+        return this.Id;
+    }
+
 }
 

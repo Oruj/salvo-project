@@ -17,7 +17,7 @@ public class Game {
     private Date creationDate = new Date();
 
     @OneToMany(mappedBy="game", fetch=FetchType.EAGER)
-    Set<GamePlayer> gameplayer = new HashSet<>();
+    Set<GamePlayer> gameplayers = new HashSet<>();
 
     public Game() {
     }
@@ -40,6 +40,10 @@ public class Game {
 
     public void setId(Long id) {
         Id = id;
+    }
+
+    public Set<GamePlayer> getGameplayers() {
+        return gameplayers;
     }
 }
 
