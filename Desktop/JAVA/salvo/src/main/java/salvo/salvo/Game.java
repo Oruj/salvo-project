@@ -8,19 +8,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class Game {
+    public class Game {
 
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long Id;
-    private Date creationDate = new Date();
+        @Id
+        @GeneratedValue(strategy=GenerationType.AUTO)
+        private Long Id;
+        private Date creationDate = new Date();
 
-    @OneToMany(mappedBy="game", fetch=FetchType.EAGER)
-    Set<GamePlayer> gameplayers = new HashSet<>();
+        @OneToMany(mappedBy="game", fetch=FetchType.EAGER)
+        Set<GamePlayer> gameplayers = new HashSet<>();
 
-    public Game() {
-    }
+        public Game() {
+        }
 
     public Game(Date creationDate) {
         this.creationDate = creationDate;
